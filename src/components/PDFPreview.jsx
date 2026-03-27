@@ -59,6 +59,7 @@ export default function PDFPreview({ client, services, grandTotal }) {
                   <tr>
                     <th>Descrição</th>
                     <th>Qtd.</th>
+                    <th>Unid.</th>
                     <th>Preço Unit.</th>
                     <th>Preço Total</th>
                   </tr>
@@ -70,6 +71,7 @@ export default function PDFPreview({ client, services, grandTotal }) {
                       <tr key={i}>
                         <td>{s.description || '—'}</td>
                         <td>{s.qty}</td>
+                        <td>{s.unit || '—'}</td>
                         <td>{formatCurrency(s.unitPrice)}</td>
                         <td>{formatCurrency(lineTotal)}</td>
                       </tr>

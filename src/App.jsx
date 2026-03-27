@@ -4,7 +4,7 @@ import ServiceLines from './components/ServiceLines'
 import PDFPreview from './components/PDFPreview'
 import PDFActions from './components/PDFActions'
 
-const INITIAL_SERVICE = { description: '', qty: 1, unitPrice: 0 }
+const INITIAL_SERVICE = { description: '', qty: 1, unit: '', unitPrice: 0 }
 
 export default function App() {
   const [client, setClient] = useState({ name: '', email: '' })

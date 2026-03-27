@@ -38,6 +38,17 @@ export default function ServiceLines({ services, onAdd, onRemove, onChange, gran
               </div>
 
               <div className="form-group">
+                {i === 0 && <label>Unid.</label>}
+                <input
+                  className="input input--sm"
+                  type="text"
+                  placeholder="Ex: hr, cx"
+                  value={service.unit}
+                  onChange={e => onChange(i, 'unit', e.target.value)}
+                />
+              </div>
+
+              <div className="form-group">
                 {i === 0 && <label>Preço Unit.</label>}
                 <input
                   className="input input--sm"

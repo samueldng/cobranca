@@ -206,10 +206,18 @@ body {
 
 .service-line {
   display: grid;
-  grid-template-columns: 1fr 70px 110px 110px 36px;
-  gap: var(--space-2);
+  grid-template-columns: 60px 70px 1fr 1fr 36px;
+  gap: var(--space-3) var(--space-2);
   align-items: end;
+  background: var(--color-bg);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
   animation: slideIn 0.25s ease;
+}
+
+.service-line > .form-group:nth-child(1) {
+  grid-column: 1 / -1;
 }
 
 .service-line .form-group {
@@ -656,11 +664,20 @@ body {
   }
 
   .service-line {
-    grid-template-columns: 1fr;
-    gap: var(--space-2);
-    padding: var(--space-3);
-    background: var(--color-bg);
-    border-radius: var(--radius-md);
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3);
+  }
+  
+  .service-line > .form-group:nth-child(1) {
+    grid-column: 1 / -1;
+  }
+  
+  .service-line > .form-group:nth-child(6) {
+    grid-column: 1 / -1;
+  }
+  
+  .service-line > .form-group:nth-child(6) .btn {
+    width: 100%;
   }
 
   .pdf-page {
